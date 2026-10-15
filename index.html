@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Group Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="The Group Portfolio of Thea Barrios, Prince Moran, and Crystal Sevilla, serving as a landing page for their app">
+    <meta name="author" content="Thea Barrios, Prince Moran, and Crystal Sevilla">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2e3c6;
+            background-image:
+                radial-gradient(circle at 50% 50%, rgba(244, 230, 200, 0.8), rgba(210, 185, 140, 0.9)),
+                radial-gradient(circle at 10% 20%, rgba(139, 69, 19, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(101, 67, 33, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+            display: flex;
+            flex-direction: column;
+            padding: 0 24px;
+            min-height: 100vh;
+            font-family: Georgia, serif;
+            font-size: 16px;
+            color: #1a1612;
+            line-height: 1.6;
+            align-items: center;
+        }
+
+        header, nav, main, footer {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
+
+        header {
+            margin-bottom: 4px;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: #651414;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+        }
+
+        header p {
+            margin-top: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        nav {
+            background-color: #651414;
+            top: 8px;
+            z-index: 100;
+            margin: 12px 0 24px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            padding: 2px 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.75);
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        nav a {
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #ffff;
+            font-weight: 1000;
+            transition: color 0.3s ease;
+            padding: 4px 8px;
+        }
+
+        nav a:hover {
+            color: #f6cb76;
+            transform: scale(1.2);
+        }
+
+        section {
+            scroll-margin-block: 80px;
+        }
+
+        h2 {
+            background-color: #651414;
+            padding: 8px 12px;
+            margin: 12px 0 24px;
+            box-sizing: border-box;
+            color: #ffff;
+            font-size: 42px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.75);
+        }
+      
+        #proj {
+            background-color: bisque;
+            margin-bottom: 16px;
+            padding: 12px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.75);
+        }
+
+        #proj p {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 4px;
+            text-align: center;
+        }
+
+        #appButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 12px auto;
+            background-color: #701111;
+            color: #ffff;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #appButton:hover {
+            background-color: #ffff;
+            color: #701111;
+            transform: scale(1.1);
+        }
+
+        #appButton:active {
+            background-color: #5a4e35;
+            transform: scale(0.95);
+        }
+
+        #members {
+            background-color: bisque;
+            border-style: solid #5a4e35;
+            margin-bottom: 16px;
+            padding: 12px 24px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.75);
+        }
+
+        .member {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .member img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            width: 175px;
+            height: 175px;
+            object-fit: cover;
+            margin-bottom: 12px;
+        }
+
+        .member h3 {
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .member p {
+            margin: 0 0 4px;
+            text-align: center;
+        }
+
+        #contact {
+
+            box-sizing: border-box;
+            margin: 12px auto;
+            padding: 8px 20px;
+        }
+
+        #contact p {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 4px;
+            text-align: center;
+        }
+
+        #questionBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 8px auto;
+            background-color: #701111;
+            color: #ffff;
+            border-radius: 100px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #questionBtn:hover {
+            background-color: #ffff;
+            color: #701111;
+            transform: scale(1.1);
+        }
+
+        #questionBtn:active {
+            background-color: #5a4e35;
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 90%) {
+            header {
+                font-size: small;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ctrl + Alt + Del</h1>
+        <p>Welcome to our Group Portfolio!<br> We're the team behind Inspoke!</p>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="#proj">Project Details</a></li>
+                    <li><a href="#members">Team Members</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section id="proj">
+            <h2>Inspoke</h2>
+            <p>Inspoke is a random quote generator that allows users to display an inspirational quote with the click of
+                a button. </p>
+            <button type="button" id="appButton">Go to Generator</button>
+            <p>Click the Button to Test it Out!</p>
+        </section>
+
+        <section id="members">
+            <h2>The Team</h2>
+            <section class="member">
+                <section>
+                    <img src="images/moran.jpg" alt="A picture of Prince Daniel L. Moran" width=30% height=auto>
+                    <h3>Prince Daniel L. Moran</h3>
+                    <p>HTML & Structure</p>
+                </section>
+                <section>
+                    <img src="images/sevilla.png" alt="A picture of Crystal Bea B. Sevilla" width=30% height=auto>
+                    <h3>Crystal Bea B. Sevilla</h3>
+                    <p>CSS & Design</p>
+                </section>
+                <section>
+                    <img src="images/barrios.png" alt="A picture of Thea Pearl L. Barrios" width=30% height=auto>
+                    <h3>Thea Pearl L. Barrios</h3>
+                    <p>JavaScript & API</p>
+                </section>
+            </section>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p>Got a question for us?</p>
+        <button id="questionBtn">Send us an email!</button>
+    </footer>
+
+    <script>
+            const button1 = document.getElementById("appButton");
+            const button2 = document.getElementById("questionBtn");
+
+            button1.addEventListener("click", function () {
+                window.location.href = "https://theabarrios.github.io/Inspoke/app/app.html";
+            });
+
+            button2.addEventListener("click", function () {
+                window.open("https://mail.google.com/mail/?view=cm&to=theapearllolobarrios@gmail.com");
+            });
+    </script>
+
+</body>
+
+</html>
