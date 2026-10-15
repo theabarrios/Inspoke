@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'IM Fell English', Georgia, serif;
+    font-family: Georgia, serif;
     font-size: 16px;
     color: #1a1612;
     line-height: 1.6;
