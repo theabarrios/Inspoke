@@ -23,16 +23,17 @@ body {
     padding: 0 24px;
 }
 
-header {
-    margin-bottom: 4px;
-    padding: 10px 0;
-    text-align: center;
-}
-
 header, main, footer {
     width: 100%;
-    max-width: 100%;
+    max-width: 600px;
     min-width: 0;
+}
+
+header {
+    margin-bottom: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 header h1 {
@@ -40,7 +41,6 @@ header h1 {
     border-radius: 14px;
     margin-bottom: 0px;
     font-size: 60px;
-    width: 100%;
     color:#ffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.75);
@@ -105,7 +105,6 @@ section {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 
 footer {
     box-sizing: border-box;
