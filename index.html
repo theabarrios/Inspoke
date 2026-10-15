@@ -17,7 +17,6 @@
         }
 
         body {
-            /*Background Gradient*/
             background-color: #f2e3c6;
             background-image:
                 radial-gradient(circle at 50% 50%, rgba(244, 230, 200, 0.8), rgba(210, 185, 140, 0.9)),
@@ -27,7 +26,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            font-family: 'IM Fell English', Georgia, serif;
+            font-family: Georgia, serif;
             font-size: 16px;
             color: #1a1612;
             line-height: 1.6;
@@ -47,73 +46,9 @@
 
         header h1 {
             margin-bottom: 0px;
-            font-size: 80px;
-            color: #651414;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
-        }
-
-        header p {
-            margin-top: 0;
-            font-size: 22px;
-            font-weight: 600;
-        }
-
-        * {
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #f2e3c6;
-            background-image:
-                radial-gradient(circle at 50% 50%, rgba(244, 230, 200, 0.8), rgba(210, 185, 140, 0.9)),
-                radial-gradient(circle at 10% 20%, rgba(139, 69, 19, 0.15) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(101, 67, 33, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: 'IM Fell English', Georgia, serif;
-            font-size: 16px;
-            color: #1a1612;
-            line-height: 1.6;
-            align-items: center;
-            padding: 0 24px;
-        }
-
-        header {
-            margin-bottom: 4px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-
-        header {
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        header h1 {
             font-size: clamp(2rem, 11vw, 5rem);
             color: #651414;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
-            overflow-wrap: anywhere;
-            line-height: 1.1;
-        }
-
-        header, nav, main, footer {
-            width: 100%;
-            max-width: 1100px;
-            min-width: 0;
-        }
-
-        header h1 {
-            margin-bottom: 0px;
-            font-size: 80px;
-            color: #651414;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
         }
 
         header p {
@@ -122,15 +57,21 @@
             font-weight: 600;
         }
 
-        nav {
+        .navigation {
+            margin-bottom: 4px;
             position: sticky;
             top: 8px;
             z-index: 100;
-            margin: 12px 0 0px;
-            padding: 2px 6px;
+            width: 100%;
+        }
+
+        .navigation nav {
             background-color: #651414;
+            width: 100%;
+            box-sizing: border-box;
             border: 1px solid #5a4e35;
             border-radius: 8px;
+            padding: 2px 6px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.75);
         }
 
@@ -253,6 +194,7 @@
         }
 
         #contact {
+
             box-sizing: border-box;
             margin-bottom: 12px;
             padding: 8px 20px;
@@ -348,16 +290,16 @@
     </footer>
 
     <script>
-            const button1 = document.getElementById("appButton");
-            const button2 = document.getElementById("questionBtn");
+        const button1 = document.getElementById("appButton");
+        const button2 = document.getElementById("questionBtn");
 
-            button1.addEventListener("click", function () {
-                window.location.href = "https://theabarrios.github.io/Inspoke/app/app.html";
-            });
+        button1.addEventListener("click", function () {
+            window.location.href = "https://theabarrios.github.io/Inspoke/app/app.html";
+        });
 
-            button2.addEventListener("click", function () {
-                window.open("https://mail.google.com/mail/?view=cm&to=theapearllolobarrios@gmail.com");
-            });
+        button2.addEventListener("click", function () {
+            window.open("https://mail.google.com/mail/?view=cm&to=theapearllolobarrios@gmail.com");
+        });
     </script>
 
 </body>
